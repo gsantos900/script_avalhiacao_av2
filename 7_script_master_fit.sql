@@ -35,7 +35,7 @@ CREATE TABLE usuario (
     email VARCHAR(100) NOT NULL,
     senha_hash VARCHAR(255) NOT NULL,
     data_nascimento DATE NOT NULL,
-    tipo_perfil tipo_perfil_user NOT NULL,
+    tipo_perfil varchar (255) NOT NULL,
     fcm_token VARCHAR(255),
     data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 
@@ -113,7 +113,7 @@ CREATE TABLE notificacao_push (
     fk_usuario INT NOT NULL,
     titulo VARCHAR(100) NOT NULL,
     mensagem TEXT NOT NULL,
-    tipo_notificacao tipo_notificacao_enum NOT NULL,
+    tipo_notificacao varchar(255) NOT NULL,
     data_agendamento TIMESTAMP NOT NULL,
     enviada BOOLEAN DEFAULT FALSE,
     data_envio TIMESTAMP,
@@ -353,3 +353,5 @@ SELECT * FROM item_pedido;
 
 -- 10. Testar tabela diario_alimentar
 SELECT * FROM diario_alimentar;
+
+
